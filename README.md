@@ -1,12 +1,12 @@
-docker pull jaspeen/oracle-11g# Docker: Oracle Database 11g EE
+Docker: Oracle Database 11g EE [jaspeen/oracle-11g] 
 
-- [Introduction](#Intro)
+- [Intro](#Intro)
 - [Installation](#Installatione)
 - [Configuration](#Configuration)
 
 ## Intro
 
-Install oracle 11g Enterprise Edition 
+Docker: Install oracle 11g Enterprise Edition with jaspeen mirror
 
 ## Installation
 
@@ -32,18 +32,19 @@ REPOSITORY           TAG                   IMAGE ID            CREATED          
 jaspeen/oracle-11g   latest                0c8711fe4f0f        4 years ago         281MB
 ```
 
-Note: this image does not install oracle directly. It configures the environment and provides installation scripts. We just need to configure the oracle installation directory and start the image as required.
+Note: this image does not install oracle directly. 
+It configures the environment and provides installation scripts. 
+We just need to configure the oracle installation directory and start the image as required.
 
 ### Preparing oracle 11g installation files
 
 Download the necessary installation package: [oracle 11g](https://www.oracle.com/database/technologies/112010-linx8664soft.html)
+
 Download two zip packages: 
 - linux.x64_11gR2_database_1of2.zip 
 - linux.x64_11gR2_database_2of2.zip
 
-unzip them to the home directory (following directory structure)
-
-Example: folder C:/oracleinstall
+unzip them to the home directory, Example: folder C:/oracleinstall  (following directory structure)
 
 ```bash
 C:.
@@ -93,7 +94,7 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 
 ## Configuration
 
-The default scott user is locked and we need to unlock it to successfully connect to oracle through the database tools
+The default scott user is locked and we need to unlock it to successfully connect to oracle through the database tools.
 
 ###  Connect to container
 
@@ -145,6 +146,7 @@ Connected.
 SQL> 
 
 -- Connect to oracle database using DBeaver 
+
 Host        : localhost
 Port        : 1521
 Database    : orcl
